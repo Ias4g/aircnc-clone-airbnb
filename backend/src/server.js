@@ -1,7 +1,12 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const routes = require('./routes')
 
 const app = express()
+mongoose.connect('mongodb+srv://aircnc:aircnc@aircnc-euehg.mongodb.net/aircnc?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
 
 // GET, POST, PUT E DELETE
 // req.query - acessa query params (para filtrar)
